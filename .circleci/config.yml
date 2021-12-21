@@ -5,7 +5,7 @@ jobs:
       - image: circleci/python:3.8.10
     steps:
       - checkout
-      - restore_cahce:
+      - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
       - run:
           command: |
